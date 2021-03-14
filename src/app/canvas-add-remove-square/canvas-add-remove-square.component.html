@@ -1,0 +1,27 @@
+<div class="container">
+   <!-- <div class="btn-wrapper">
+       <button (click)="addSquare()">Add</button>
+   </div> -->
+
+   <div class="coordinates">
+     <div class="left-coordinate">left: {{selectedSquare?.left}}</div>
+     <div class="right-coordinate">top: {{selectedSquare?.top}} </div>
+   </div>
+
+   <div class="square-wrapper">
+
+    <div class="square" *ngFor="let square of squares"  
+    [style.left.px]="square.left"
+    [style.top.px]="square.top"
+    [class.selected]="square == selectedSquare"
+    (click)="selectSquare(square)"
+
+    ></div>
+
+   </div>
+
+
+</div>
+
+
+

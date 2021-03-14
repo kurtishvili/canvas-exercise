@@ -1,0 +1,8 @@
+< <select [(ngModel)]="selectedCity" (ngModelChange)="change()" >
+    <option [value]="0">Select ...</option>
+    <option *ngFor="let city of cities" [value]="city.id" >{{ city.value }}</option>
+</select> 
+
+<div class="container">
+    {{date | date: 'HH:mm:ss'}}
+</div>
